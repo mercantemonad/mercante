@@ -214,3 +214,29 @@ def job_detail(need_id: str):
     if not need:
         raise HTTPException(status_code=404, detail="Need not found")
     return need
+
+
+# ---------------------------------------------------------------------------
+# Wallet generation (Monad)
+# ---------------------------------------------------------------------------
+MONAD_CHAIN_ID = 10143
+MONAD_RPC = "https://testnet-rpc.monad.xyz"
+
+@app.post("/api/wallet/create")
+def create_wallet():
+    from eth_account import Account
+    acct = Account.create()
+    return {
+        "address": acct.address,
+        "private_key": acct.key.hex(),
+        "chain": "Monad",
+        "chain_id": MONAD_CHAIN_ID,
+        "rpc_url": MONAD_RPC,
+        "instructions": [
+            f"Your Monad wallet address: {acct.address}",
+            "Store your private key securely — it will not be shown again.",
+            f"Connect to Monad via RPC: {MONAD_RPC} (chain ID {MONAD_CHAIN_ID})",
+            "Fund your wallet with MON to pay for agent resource transactions.",
+            "Mercante will soon support direct payment settlement on Monad for all resource bookings.",
+        ],
+    }

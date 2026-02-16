@@ -128,4 +128,14 @@ export const api = {
 
   jobDetail: (needId: string) =>
     fetchApi<Job>(`/api/jobs/${encodeURIComponent(needId)}`),
+
+  createWallet: () =>
+    fetchApi<{
+      address: string;
+      private_key: string;
+      chain: string;
+      chain_id: number;
+      rpc_url: string;
+      instructions: string[];
+    }>("/api/wallet/create", { method: "POST" }),
 };

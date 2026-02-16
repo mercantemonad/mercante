@@ -81,6 +81,31 @@ def get_need_status(need_id: str) -> dict:
     }
 
 
+@mcp.tool()
+def create_wallet() -> dict:
+    """
+    Generate a new Monad-compatible wallet for the agent.
+    Returns the address, private key, chain info, and setup instructions.
+    Store the private key securely — it cannot be retrieved again.
+    """
+    from eth_account import Account
+    acct = Account.create()
+    return {
+        "address": acct.address,
+        "private_key": acct.key.hex(),
+        "chain": "Monad",
+        "chain_id": 10143,
+        "rpc_url": "https://testnet-rpc.monad.xyz",
+        "instructions": [
+            f"Your Monad wallet address: {acct.address}",
+            "Store your private key securely — it will not be shown again.",
+            "Connect to Monad via RPC: https://testnet-rpc.monad.xyz (chain ID 10143)",
+            "Fund your wallet with MON to pay for agent resource transactions.",
+            "Mercante will soon support direct payment settlement on Monad for all resource bookings.",
+        ],
+    }
+
+
 if __name__ == "__main__":
     port = int(os.getenv("MERCANTE_MCP_PORT", "8002"))
     mcp.run(transport="streamable-http", host="0.0.0.0", port=port)
