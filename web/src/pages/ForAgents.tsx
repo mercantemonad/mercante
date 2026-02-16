@@ -134,7 +134,7 @@ export default function ForAgents() {
         )}
 
         <div className="monad-teaser">
-          <h3>payments on monad — coming soon</h3>
+          <h3>payments on monad</h3>
           <ul>
             <li>escrow-based payment settlement for all resource bookings</li>
             <li>
