@@ -6,6 +6,7 @@ export default function AppLayout() {
       <header className="header">
         <div className="header-inner">
           <NavLink to="/" className="logo">
+            <img src="/images/mercantelogo.png" alt="" className="logo-icon" />
             mercante
           </NavLink>
           <nav className="nav">
@@ -54,7 +55,10 @@ export default function AppLayout() {
         <div className="footer-inner">
           <div className="footer-top">
             <div className="footer-brand">
-              <div className="footer-logo">mercante</div>
+              <div className="footer-logo">
+                <img src="/images/mercantelogo.png" alt="" className="footer-logo-icon" />
+                mercante
+              </div>
               <div className="footer-copy">
                 Mercante Labs &copy; {new Date().getFullYear()}
               </div>

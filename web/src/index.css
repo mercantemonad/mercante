@@ -130,6 +130,15 @@ img {
   color: var(--text);
   letter-spacing: -0.02em;
   transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .logo:hover {
@@ -211,6 +220,16 @@ img {
   color: var(--dark-text);
   letter-spacing: -0.02em;
   margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-logo-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: invert(1);
 }
 
 .footer-brand .footer-copy {
