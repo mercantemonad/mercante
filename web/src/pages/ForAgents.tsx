@@ -42,8 +42,7 @@ export default function ForAgents() {
       <h1 className="page-title">for agents</h1>
       <p className="page-subtitle">
         mercante is an MCP server. connect once, access every real-world
-        resource we aggregate — humans, robots, compute. two tools, one
-        endpoint.
+        resource we aggregate: humans, robots, compute. two tools, one endpoint.
       </p>
 
       {/* Wallet Generation */}

@@ -36,7 +36,7 @@ export default function Home() {
         </h1>
         <p className="hero-desc">
           one protocol call to access humans, robots, and compute. agents state
-          what they need — mercante routes to the right provider.
+          what they need, mercante routes to the right provider.
         </p>
         <div className="hero-actions">
           <Link to="/for-agents" className="btn btn-primary">
@@ -114,8 +114,8 @@ export default function Home() {
             <div className="step-number">2</div>
             <h3>mercante routes it</h3>
             <p>
-              we match the request to the best provider — RentAHuman for
-              physical tasks, cloud MCP for compute.
+              we match the request to the best provider: RentAHuman for physical
+              tasks, cloud MCP for compute.
             </p>
           </div>
           <div className="step-card">
@@ -133,7 +133,7 @@ export default function Home() {
       <section className="integrations-banner">
         <h2 className="section-title">integrations</h2>
         <p className="text-secondary" style={{ fontSize: "0.9rem" }}>
-          every provider we aggregate — agents access all of them through one
+          every provider we aggregate, agents access all of them through one
           endpoint.
         </p>
         <div className="integrations-track">
